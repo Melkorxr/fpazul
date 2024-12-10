@@ -22,7 +22,7 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2  # Menggunakan aksi untuk mengatur PHP
       with:
-        php-version: '7.4'  # Anda bisa memilih versi PHP sesuai dengan kebutuhan
+        php-version: '8.2'  # Anda bisa memilih versi PHP sesuai dengan kebutuhan
         extensions: mbstring, mysqli, curl  # Tambahkan ekstensi PHP yang dibutuhkan
         coverage: none  # Tidak perlu laporan coverage untuk ini
 
