@@ -36,8 +36,7 @@ CREATE TABLE `reservasi` (
   `kontak` VARCHAR(20) NOT NULL,
   `status` VARCHAR(20) NOT NULL DEFAULT 'process',
   `user` INT(11) NOT NULL,
-  PRIMARY KEY (`no_rsvs`),
-  FOREIGN KEY (`user`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`no_rsvs`);
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Buat Trigger char(10)
@@ -96,9 +95,6 @@ CREATE TABLE `pinjam` (
   `status` VARCHAR(20) NOT NULL DEFAULT 'belum dikembalikan',
   `user` INT(11) NOT NULL,
   PRIMARY KEY (`no_pinjam`),
-  FOREIGN KEY (`nomor_kunjungan`) REFERENCES `pengunjung`(`nomor_kunjungan`),
-  FOREIGN KEY (`id_buku`) REFERENCES `buku`(`id_buku`),
-  FOREIGN KEY (`user`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Buat Trigger untuk char(12)
