@@ -8,19 +8,19 @@ USE perpustakaan;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
+  `username` varchar(100) NOT NULL,
   `password` text NOT NULL,
   `role` enum('user','admin') DEFAULT 'user',
   `reset_token` varchar(255) DEFAULT NULL,
   `token_expires` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
 CREATE TABLE `buku` (
   `id_buku` VARCHAR(20) NOT NULL,
-  `judul_buku` VARCHAR(256) NOT NULL,
-  `penulis` VARCHAR(256) NOT NULL,
+  `judul_buku` VARCHAR(30) NOT NULL,
+  `penulis` VARCHAR(30) NOT NULL,
   `tahun_terbit` INT(4) NOT NULL,
   `jenis_buku` VARCHAR(256) NOT NULL,
   `bahasa` VARCHAR(30) NOT NULL,
